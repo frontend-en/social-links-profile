@@ -1,43 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="./styles/style.css">
-
   <title>Frontend Mentor | Blog preview card</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
 </head>
 
 <body>
   <article aria-labelledby="article" class="card">
-    <img src="./assets/images/illustration-article.svg" alt="" class="card__image">
-    <div class="card__content">
-      <span class="card__tag">Learning</span>
-      <div class="card__date">Published 21 Dec 2032</div>
-      <hgroup class="card__text-half">
-        <h2 class="card__title"><a href="#"><span>html & css</span> foundations</a></h2>
-        <p class="card__subtitle">These languages are the backbone of every website, defining structure, content, and presentation.</p>
+    <img src="./assets/images/avatar-jessica.jpeg" alt="avatar Jessica Randall" class="card__image">
+      <hgroup class="card__header">
+        <h2 class="card__title">Jessica Randall</h2>
+        <p class="card__subtitle">London, United Kingdom</p>
+        <p class="card__life-position">"Front-end developer and avid reader."</p>
       </hgroup>
-      <hgroup class="card__caption caption">
-        <img src="./assets/images/image-avatar.webp" alt="avatar Greg Hooper" class="caption__image">
-        <h2 class="caption__title"><a href="#">Greg Hooper</a></h2>
-      </hgroup>
-    </div>
+      <div class="card__links">
+        <a role="link" href="#" class="card__link">GitHub</a>
+        <a role="link" href="#" class="card__link">Frontend Mentor</a>
+        <a role="link" href="#" class="card__link">LinkedIn</a>
+        <a role="link" href="#" class="card__link">Twitter</a>
+        <a role="link" href="#" class="card__link">Instagram</a>
+      </div>
   </article>
 </body>
 

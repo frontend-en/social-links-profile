@@ -2,54 +2,88 @@
 @import url('./reset.css');
 
 :root {
-  font-family: "Figtree Regular", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 62.5%;
+  --ident-xxl: 4.0rem;
+  --ident-xl: 2.4rem;
+  --ident-md: 1.6rem;
+  --ident-xs: 1.2rem;
+  --ident-xxs: 0.4rem;
   --desc-width: 1440px;
   --mobile-width: 375px;
-  --paragraph: 1.6rem;
-  --black: #111;
-	--pure-white: #fff;
-	--yellow: #f4d04e;
-	--grey: #7f7f7f;
-  --main-ident: 24px;
-  --main-ident-sx: 12px;
-  --font-weight-extra-bold: 800;
-  --line-height: 150%;
+  --heading-font: 2.4rem;
+  --paragraph: 1.4rem;
+	--black: hsl(0, 0%, 8%);
+	--dark-grey: hsl(0, 0%, 12%);
+	--grey: hsl(0, 0%, 20%);
+	--white: hsl(0, 0%, 100%);
+	--neon-green: #c4f82a;
 }
 
 body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--yellow);
-}
-
-a {
-  text-decoration: none;
-}
-
-h2, p {
-  margin: 0;
-  padding: 0;
+  background-color: var(--black);
 }
 
 .card {
-  margin: var(--main-ident);
-  max-width: 38.4rem;
-  background-color: var(--pure-white);
-  padding: var(--main-ident);
-  border-radius: 20px;
-  border: 2px solid var(--black);
-  box-shadow: clamp(0.8rem, calc(1vw + 1rem), 1.6rem) clamp(0.8rem, calc(1vw + 1rem), 1.6rem) var(--black);
+  border-radius: 12px;
+  background-color: var(--dark-grey);
+  padding: clamp(1.5rem, 1.5rem + 2vw, 4rem);
+  min-width: 327px;
+  width: clamp(327px, 38vw, 384px);
+  max-width: 384px;
 }
-
 .card__image {
-  object-fit: cover;
-  border-radius: 10px;
+  width: 8.8rem;
+  height: 8.8rem;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: var(--ident-xl);
 }
 
-.card__content {
-  padding-top: var(--main-ident);
-  font-size: 1.2rem;
+.card__header {
+  text-align: center;
 }
 
+.card__title {
+  font-family: "Inter SemiBold";
+  font-size: var(--heading-font);
+  color: var(--white);
+  margin-bottom: var(--ident-xxs);
+}
+.card__subtitle {
+  font-family: "Inter SemiBold";
+  font-size: var(--paragraph);
+  color: var(--neon-green);
+  margin-bottom: var(--ident-xl);
+}
+.card__life-position {
+  font-family: "Inter";
+  font-size: var(--paragraph);
+  color: var(--white);
+  margin-bottom: var(--ident-xl);
+}
+.card__links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ident-md);
+}
+.card__link {
+  font-family: "Inter Bold";
+  color: var(--white);
+  font-size: var(--paragraph);
+  text-align: center;
+  background-color: var(--grey);
+  padding: var(--ident-xs) 0;
+  border-radius: 0.8rem;
+  transition: all 300ms ease-in-out;
+  max-width: 304px;
+}
+
+.card__link:hover {
+  background-color: var(--neon-green);
+  color: var(--grey);
+  cursor: url('../assets/images/handcursor.png'), auto; 
+}

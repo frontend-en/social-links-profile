@@ -1,14 +1,21 @@
 @font-face {
-  font-family: "Figtree";
-  src: local("Figtree ExtraBold"),
-    local("Figtree-ExtraBold"),
-    url("./assets/fonts/static/Figtree-ExtraBold.ttf") format("ttf");
-  font-weight: 800;
+  font-family: "Inter";
+  src: local("Inter"),
+    local("Inter"),
+    url("../assets/fonts/static/Inter-Regular.ttf") format("TrueType");
+  font-weight: 400;
 }
 @font-face {
-  font-family: "Figtree";
-  src: local("Figtree SemiBold"),
-    local("Figtree-SemiBold"),
-    url("./assets/fonts/static/Figtree-SemiBold.ttf") format("ttf");
-  font-weight: 500;
+  font-family: "Inter SemiBold";
+  src: local("Inter-SemiBold"),
+    local("Inter-SemiBold"),
+    url("../assets/fonts/static/Inter-SemiBold.ttf") format("TrueType");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Inter Bold";
+  src: local("Inter-Bold"),
+    local("Inter-Bold"),
+    url("../assets/fonts/static/Inter-Bold.ttf") format("TrueType");
+  font-weight: 700;
 }
