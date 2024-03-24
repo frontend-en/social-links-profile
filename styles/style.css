@@ -1,0 +1,55 @@
+@import url('./fonts.css');
+@import url('./reset.css');
+
+:root {
+  font-family: "Figtree Regular", sans-serif;
+  font-size: 62.5%;
+  --desc-width: 1440px;
+  --mobile-width: 375px;
+  --paragraph: 1.6rem;
+  --black: #111;
+	--pure-white: #fff;
+	--yellow: #f4d04e;
+	--grey: #7f7f7f;
+  --main-ident: 24px;
+  --main-ident-sx: 12px;
+  --font-weight-extra-bold: 800;
+  --line-height: 150%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--yellow);
+}
+
+a {
+  text-decoration: none;
+}
+
+h2, p {
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  margin: var(--main-ident);
+  max-width: 38.4rem;
+  background-color: var(--pure-white);
+  padding: var(--main-ident);
+  border-radius: 20px;
+  border: 2px solid var(--black);
+  box-shadow: clamp(0.8rem, calc(1vw + 1rem), 1.6rem) clamp(0.8rem, calc(1vw + 1rem), 1.6rem) var(--black);
+}
+
+.card__image {
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card__content {
+  padding-top: var(--main-ident);
+  font-size: 1.2rem;
+}
+
