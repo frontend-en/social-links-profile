@@ -1,16 +1,16 @@
 @font-face {
   font-family: "Inter";
-  src: local("Inter"), local("Inter"), url("../assets/fonts/static/Inter-Regular.ttf") format("TrueType");
+  src: local("Inter"), local("Inter"), url("../assets/fonts/static/Inter-Regular.ttf") format("truetype");
   font-weight: 400;
 }
 @font-face {
   font-family: "Inter SemiBold";
-  src: local("Inter-SemiBold"), local("Inter-SemiBold"), url("../assets/fonts/static/Inter-SemiBold.ttf") format("TrueType");
+  src: local("Inter-SemiBold"), local("Inter-SemiBold"), url("../assets/fonts/static/Inter-SemiBold.ttf") format("truetype");
   font-weight: 600;
 }
 @font-face {
   font-family: "Inter Bold";
-  src: local("Inter-Bold"), local("Inter-Bold"), url("../assets/fonts/static/Inter-Bold.ttf") format("TrueType");
+  src: local("Inter-Bold"), local("Inter-Bold"), url("../assets/fonts/static/Inter-Bold.ttf") format("truetype");
   font-weight: 700;
 }
 /* https://piccalil.li/blog/a-modern-css-reset */
@@ -147,12 +147,14 @@ main {
   font-family: "Inter SemiBold";
   color: #c4f82a;
   margin-bottom: 1.5rem;
+  font-size: 0.875rem;
 }
 
 .card__life-position {
   font-family: "Inter";
   color: hsl(0, 0%, 100%);
   margin-bottom: 1.5rem;
+  font-size: 0.875rem;
 }
 
 .card__links {
@@ -168,6 +170,7 @@ main {
 
 .card__links li a {
   font-family: "Inter Bold";
+  font-size: 0.875rem;
   color: hsl(0, 0%, 100%);
   text-align: center;
   background-color: hsl(0, 0%, 20%);
