@@ -1,46 +1,136 @@
-@import url('./fonts.css');
-@import url('./reset.css');
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"), local("Inter"), url("../assets/fonts/static/Inter-Regular.ttf") format("TrueType");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Inter SemiBold";
+  src: local("Inter-SemiBold"), local("Inter-SemiBold"), url("../assets/fonts/static/Inter-SemiBold.ttf") format("TrueType");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Inter Bold";
+  src: local("Inter-Bold"), local("Inter-Bold"), url("../assets/fonts/static/Inter-Bold.ttf") format("TrueType");
+  font-weight: 700;
+}
+/* https://piccalil.li/blog/a-modern-css-reset */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 :root {
   font-family: "Inter", sans-serif;
-  font-size: 62.5%;
-  --ident-xxl: 4.0rem;
-  --ident-xl: 2.4rem;
-  --ident-md: 1.6rem;
-  --ident-xs: 1.2rem;
-  --ident-xxs: 0.4rem;
-  --desc-width: 1440px;
-  --mobile-width: 375px;
-  --heading-font: 2.4rem;
-  --paragraph: 1.4rem;
-	--black: hsl(0, 0%, 8%);
-	--dark-grey: hsl(0, 0%, 12%);
-	--grey: hsl(0, 0%, 20%);
-	--white: hsl(0, 0%, 100%);
-	--neon-green: #c4f82a;
 }
 
 body {
   display: flex;
-  justify-content: center;
   align-items: center;
-  background-color: var(--black);
+  background-color: hsl(0, 0%, 8%);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 20px;
 }
 
 .card {
-  border-radius: 12px;
-  background-color: var(--dark-grey);
-  padding: clamp(1.5rem, 1.5rem + 2vw, 4rem);
-  min-width: 327px;
-  width: clamp(327px, 38vw, 384px);
-  max-width: 384px;
+  border-radius: 0.75rem;
+  background-color: hsl(0, 0%, 12%);
+  max-width: 24rem;
+  width: 100%;
+  padding: clamp(1.5rem, 1.1479rem + 1.5023vi, 2.5rem);
 }
+
 .card__image {
-  width: 8.8rem;
-  height: 8.8rem;
+  width: 5.5rem;
+  height: 5.5rem;
   border-radius: 50%;
   margin: 0 auto;
-  margin-bottom: var(--ident-xl);
+  margin-bottom: 1.5rem;
 }
 
 .card__header {
@@ -49,41 +139,46 @@ body {
 
 .card__title {
   font-family: "Inter SemiBold";
-  font-size: var(--heading-font);
-  color: var(--white);
-  margin-bottom: var(--ident-xxs);
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 0.25rem;
 }
+
 .card__subtitle {
   font-family: "Inter SemiBold";
-  font-size: var(--paragraph);
-  color: var(--neon-green);
-  margin-bottom: var(--ident-xl);
+  color: #c4f82a;
+  margin-bottom: 1.5rem;
 }
+
 .card__life-position {
   font-family: "Inter";
-  font-size: var(--paragraph);
-  color: var(--white);
-  margin-bottom: var(--ident-xl);
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 1.5rem;
 }
+
 .card__links {
   display: flex;
   flex-direction: column;
-  gap: var(--ident-md);
-}
-.card__link {
-  font-family: "Inter Bold";
-  color: var(--white);
-  font-size: var(--paragraph);
-  text-align: center;
-  background-color: var(--grey);
-  padding: var(--ident-xs) 0;
-  border-radius: 0.8rem;
-  transition: all 300ms ease-in-out;
-  max-width: 304px;
+  gap: 1rem;
 }
 
-.card__link:hover {
-  background-color: var(--neon-green);
-  color: var(--grey);
-  cursor: url('../assets/images/handcursor.png'), auto; 
+.card__links li {
+  display: flex;
+  gap: 1rem;
 }
+
+.card__links li a {
+  font-family: "Inter Bold";
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+  background-color: hsl(0, 0%, 20%);
+  padding: 0.75rem 0;
+  border-radius: 0.8rem;
+  transition: all 300ms ease-in-out;
+  flex-grow: 1;
+}
+
+.card__links li a:hover {
+  background-color: #c4f82a;
+  color: hsl(0, 0%, 20%);
+  cursor: url("../assets/images/handcursor.png") 5 5, auto;
+}/*# sourceMappingURL=style.css.map */
